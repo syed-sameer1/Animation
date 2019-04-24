@@ -1,14 +1,11 @@
 div#ball {
-    height: 150px;
+    height: 200px;
     width: 200px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(37, 56, 44);
     font-size: 18px;
     text-align: center;
-    margin: 10% 0% 0% 30%;
-    padding-top: 50px;
-    box-shadow: 2px 2px 5px black;
-    text-shadow: 2px 2px 5px black;
+    margin: 0% 0% 0% 30%;
     border-radius: 50%;
     animation: ball 2s infinite alternate;
     border-bottom-left-radius: 50%;
@@ -19,34 +16,35 @@ div#shadow {
     background-color: rgb(194, 190, 190);
     width: 200px;
     height: 50px;
-    margin: 10% 0% 0% 34%;
+    margin: 500px 0% 100px 34%;
     border-top-right-radius: 50%;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     animation: shadow 2s infinite alternate;
-
+    box-shadow: 2px 2px 15px rgb(194, 190, 190);
 }
 
 @keyframes ball {
     0% {
-        box-shadow: 2px 2px 5px rgb(131, 127, 127);
-        text-shadow: 2px 2px 5px rgb(131, 127, 127);
+        background-color: black;
+    }
+    80% {
+        background-color: black;
     }
     100% {
-        box-shadow: 2px 2px 15px black;
-        text-shadow: 2px 2px 5px black;
-        transform: translateY(100px);
+        transform: translateY(500px);
+        background-image: linear-gradient(to bottom right, black, rgb(92, 0, 128));
     }
 }
 
 @keyframes shadow {
     0% {
+        width: 30px;
+        height: 10px;
+    }
+    100% {
         width: 200px;
         height: 50px;
-    }
-    100%{
-        width: 70px;
-        height: 10px;
     }
 }
